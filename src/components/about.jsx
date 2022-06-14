@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class about extends Component {
-  render() {
+const About = (props) => {
     return (
         <div id="about">
         <div className="container">
@@ -10,17 +9,17 @@ export class about extends Component {
             <div className="col-xs-12 col-md-6">
               <div className="about-text">
                 <h2>A propos de nous</h2>
-                <p>{this.props.data ? this.props.data.paragraph : 'loading...'}</p>
+                <p>{props.data ? props.data.paragraph : 'loading...'}</p>
                 <h3>Pourquoi nous faire coniance?</h3>
                 <div className="list-style">
                   <div className="col-lg-6 col-sm-6 col-xs-12">
                     <ul>
-                      {this.props.data ? this.props.data.Why.map((d, i) => <li  key={`${d}-${i}`}>{d}</li>) : 'loading'}
+                      {props.data ? props.data.Why.map((d, i) => <li  key={`${d}-${i}`}>{d}</li>) : 'loading'}
                     </ul>
                   </div>
                   <div className="col-lg-6 col-sm-6 col-xs-12">
                     <ul>
-                    {this.props.data ? this.props.data.Why2.map((d, i) => <li  key={`${d}-${i}`}> {d}</li>) : 'loading'}
+                    {props.data ? props.data.Why2.map((d, i) => <li  key={`${d}-${i}`}> {d}</li>) : 'loading'}
 
                     </ul>
                   </div>
@@ -31,7 +30,6 @@ export class about extends Component {
         </div>
       </div>
     )
-  }
 }
 
-export default about
+export default About

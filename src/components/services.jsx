@@ -1,7 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 
-export class Services extends Component {
-  render() {
+const Services = (props) => {
     return (
       <div id="services" className="text-center">
         <div className="container">
@@ -13,8 +12,8 @@ export class Services extends Component {
             </p>
           </div>
           <div className="row">
-            {this.props.data
-              ? this.props.data.map((d, i) => (
+            {props.data
+              ? props.data.map((d, i) => (
                   <div  key={`${d.name}-${i}`} className="col-md-4">
                     {" "}
                     <i className={d.icon}></i>
@@ -29,7 +28,6 @@ export class Services extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default Services;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navigation from './components/navigation';
 import Header from './components/header';
 import Features from './components/features';
@@ -9,32 +9,29 @@ import Team from './components/Team';
 import Contact from './components/contact';
 import JsonData from './data/data.json';
 
-export class App extends Component {
-  state = {
-    landingPageData: {},
-  }
-  getlandingPageData() {
-    this.setState({landingPageData : JsonData})
-  }
-
-  componentDidMount() {
-    this.getlandingPageData();
+const App = () => {
+  const [landingPageData, setLandingPageData] = useState({})
+  
+  const getlandingPageData = () => {
+    setLandingPageData(JsonData)
   }
 
-  render() {
+  useEffect(() => {
+    getlandingPageData()
+  }, [])
+
     return (
       <div>
         <Navigation />
-        <Header data={this.state.landingPageData.Header} />
-        <Features data={this.state.landingPageData.Features} />
-        <About data={this.state.landingPageData.About} />
-        <Services data={this.state.landingPageData.Services} />
+        <Header data={landingPageData.Header} />
+        <Features data={landingPageData.Features} />
+        <About data={landingPageData.About} />
+        <Services data={landingPageData.Services} />
         <Gallery />
-        <Team data={this.state.landingPageData.Team} />
-        <Contact data={this.state.landingPageData.Contact} />
+        <Team data={landingPageData.Team} />
+        <Contact data={landingPageData.Contact} />
       </div>
     )
-  }
 }
 
 export default App;
