@@ -18,23 +18,23 @@ const Gallery = () => {
                   <div className="hover-bg">
                     {" "}
                     <a
-                      href="img/portfolio/01-large.jpg"
-                      title="Project Title"
+                      href="https://atlasvulnerabilitemadagascar.mg"
+                      title="Atlas vunérabilité Madagascar"
                       data-lightbox-gallery="gallery1"
                     >
                       <div className="hover-text">
-                        <h4>Lorem Ipsum</h4>
+                        <h4>Atlas vunérabilité Madagascar</h4>
                       </div>
                       <img
-                        src="img/portfolio/01-small.jpg"
+                        src="img/portfolio/01-small.png"
                         className="img-responsive"
-                        alt="Project Title"
+                        alt="Atlas vunérabilité Madagascar"
                       />{" "}
                     </a>{" "}
                   </div>
                 </div>
               </div>
-              <div className="col-sm-6 col-md-4 col-lg-4">
+              {/* <div className="col-sm-6 col-md-4 col-lg-4">
                 <div className="portfolio-item">
                   <div className="hover-bg">
                     {" "}
@@ -201,7 +201,7 @@ const Gallery = () => {
                     </a>{" "}
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

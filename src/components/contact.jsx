@@ -115,7 +115,7 @@ const Contact = (props) => {
         <div id="footer">
           <div className="container text-center">
             <p>
-              &copy; 2020 Andry Radimison.
+              &copy; 2023 Aniomaly.
             </p>
           </div>
         </div>
